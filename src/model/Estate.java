@@ -1,7 +1,7 @@
 package model;
 
 import java.time.LocalDate;
-public abstract class Estate {
+public sealed abstract class Estate permits Apartment, House {
     private String street;
     private String houseNumber;
     private String town;
