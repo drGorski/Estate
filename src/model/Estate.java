@@ -43,7 +43,7 @@ public abstract class Estate {
     }
 
     public String toString() {
-        return "Postal code: " + postalCode + ",  Town: " + town + ", Street: " + street + " " + houseNumber + ",  Area: " + area +
-                "m^2,  Price: " + price + " $,  Offer date: " + offerDate;
+        return "Postal code: " + postalCode + ", Town: " + town + ", Street: " + street + " " + houseNumber + ", Area: " + area +
+                "m^2, Price: " + price + " $, Offer date: " + offerDate;
     }
 }
