@@ -1,18 +1,16 @@
 package view;
 import controller.OfferList;
-import model.Apartment;
 import model.Estate;
-import model.House;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 public class Main {
     public static void menu() {
         System.out.println("Select function:");
-        System.out.println("1. Add offer for house sell");
-        System.out.println("2. Add offer for apartment sell");
-        System.out.println("3. Show offers for selling houses");
-        System.out.println("4. Show offers for selling apartments");
+        System.out.println("1. Add a house for sale offer");
+        System.out.println("2. Add an apartment for sale offer");
+        System.out.println("3. Show house sales offers");
+        System.out.println("4. Show apartment sales offers");
         System.out.println("0. Exit");
     }
     public static void addSellHouseOffer(OfferList offerList, Scanner scanner) {
@@ -34,8 +32,8 @@ public class Main {
         System.out.print("Offer validity date (YYYY-MM-DD): ");
         LocalDate validityDate = LocalDate.parse(scanner.nextLine());
 
-        House house = new House(street, houseNumber, town, code, houseArea, price, validityDate, plotArea);
-        offerList.addOffer(house);
+        offerList.addOffer(street, houseNumber, town, code, houseArea, price, validityDate, plotArea);
+
         System.out.println("\nHouse sell offer was added.");
         System.out.println(" ");
     }
@@ -60,8 +58,8 @@ public class Main {
         System.out.print("Offer validity date (YYYY-MM-DD): ");
         LocalDate validityDate = LocalDate.parse(scanner.nextLine());
 
-        Apartment flat = new Apartment(street, houseNumber, town, code, apartmentArea, price, validityDate, apartmentNumber, floor);
-        offerList.addOffer(flat);
+        offerList.addOffer(street, houseNumber, town, code, apartmentArea, price, validityDate, apartmentNumber, floor);
+
         System.out.println("\nApartment sell offer was added.");
         System.out.println(" ");
     }
@@ -71,10 +69,8 @@ public class Main {
         System.out.print("Enter the minimal house area (m2): ");
         double houseArea = scanner.nextDouble();
         scanner.nextLine();
-        LocalDate today = LocalDate.now();
         System.out.println("House sell offers in " + town + ", house area >= " + houseArea + " m2:");
-        List<Estate> result = offerList.filterOffers(offer -> (offer instanceof House) && offer.getTown().equalsIgnoreCase(town)
-                && offer.getArea() >= houseArea && !offer.getOfferDate().isBefore(today));
+        List<Estate> result = offerList.filterOffers(town, houseArea);
         for (Estate offer : result) { System.out.println(offer); }
     }
     public static void showApartmentSellOffers(OfferList offerList, Scanner scanner) {
@@ -85,10 +81,8 @@ public class Main {
         System.out.print("Enter minimum floor: ");
         int minFloor = scanner.nextInt();
         scanner.nextLine();
-        LocalDate today = LocalDate.now();
         System.out.println("Apartment sell offers in " + town + ", price <= " + maxPrice + " $, floor >= " + minFloor + ":");
-        List<Estate> result = offerList.filterOffers(offer -> (offer instanceof Apartment) && offer.getTown().equalsIgnoreCase(town)
-                && offer.getPrice() <= maxPrice && ((Apartment) offer).getFloorNumber() >= minFloor && !offer.getOfferDate().isBefore(today));
+        List<Estate> result = offerList.filterOffers(town, maxPrice, minFloor);
         for (Estate offer : result) { System.out.println(offer); }
     }
     public static void main(String[] args) {
