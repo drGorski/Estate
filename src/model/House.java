@@ -10,9 +10,6 @@ public final class House extends Estate {
     public double getPlotArea() {
         return plotArea;
     }
-    public void setPlotArea(double plotArea) {
-        this.plotArea = plotArea;
-    }
     public String toString() {
         return "House offer: " + super.toString() + ", Plot area: " + plotArea + "m^2";
     }
