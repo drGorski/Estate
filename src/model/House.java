@@ -11,6 +11,6 @@ public final class House extends Estate {
         return plotArea;
     }
     public String toString() {
-        return "House offer: " + super.toString() + ", Plot area: " + plotArea + "m^2";
+        return "House offer: " + super.toString() + ", Plot area: " + plotArea + " m2";
     }
 }
