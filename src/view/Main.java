@@ -13,7 +13,7 @@ public class Main {
         System.out.println("4. Show apartment sales offers");
         System.out.println("0. Exit");
     }
-    private static void addSellHouseOffer(OfferList offerList, Scanner scanner) {
+    public static void addSellHouseOffer(OfferList offerList, Scanner scanner) {
         System.out.print("Street: ");
         String street = scanner.nextLine();
         System.out.print("House number: ");
@@ -37,7 +37,7 @@ public class Main {
         System.out.println("\nHouse sell offer was added.");
         System.out.println(" ");
     }
-    private static void addSellApartmentOffer(OfferList offerList, Scanner scanner) {
+    public static void addSellApartmentOffer(OfferList offerList, Scanner scanner) {
         System.out.print("Street: ");
         String street = scanner.nextLine();
         System.out.print("House number: ");
@@ -63,7 +63,7 @@ public class Main {
         System.out.println("\nApartment sell offer was added.");
         System.out.println(" ");
     }
-    private static void showHouseSellOffers(OfferList offerList, Scanner scanner) {
+    public static void showHouseSellOffers(OfferList offerList, Scanner scanner) {
         System.out.print("Enter the town: ");
         String town = scanner.nextLine();
         System.out.print("Enter the minimal house area (m2): ");
@@ -73,7 +73,7 @@ public class Main {
         List<Estate> result = offerList.filterOffers(town, houseArea);
         for (Estate offer : result) { System.out.println(offer); }
     }
-    private static void showApartmentSellOffers(OfferList offerList, Scanner scanner) {
+    public static void showApartmentSellOffers(OfferList offerList, Scanner scanner) {
         System.out.print("Enter the town: ");
         String town = scanner.nextLine();
         System.out.print("Enter the maximum price: ");
