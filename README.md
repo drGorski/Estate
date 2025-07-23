@@ -36,7 +36,7 @@ The figure below presents the UML Sequence diagram for invocation of the ``addSe
   <img src="Estate-sequence-1.png" alt="UML Use Case diagram" width="600">
 </p>
 
-The figure below presents the UML Sequence diagram for invocation of the ``addSellHouseOffer()`` method. The method corresponds to the ``Add a house for sale`` use case.
+The figure below presents the UML Sequence diagram for invocation of the ``showHouseSellOffers()`` method. The method corresponds to the ``Search for a house for sale`` use case.
 <p align="center">
   <img src="Estate-sequence-2.png" alt="UML Use Case diagram" width="600">
 </p>
