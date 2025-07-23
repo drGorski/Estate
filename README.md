@@ -26,19 +26,19 @@ The figure below presents the UML Use Case diagram with use cases of the Estate 
 
 The figure below presents the UML Class diagram with classes and relationships of the Estate package.
 <p align="center">
-  <img src="Estate-class-diagram.png" alt="UML Use Case diagram" width="400">
+  <img src="Estate-class-diagram.png" alt="UML Use Case diagram" width="600">
 </p>
 
 ## Package operation in UML Sequence diagrams
 
 The figure below presents the UML Sequence diagram for invocation of the ``addSellHouseOffer()`` method. The method corresponds to the ``Add a house for sale`` use case.
 <p align="center">
-  <img src="Estate-sequence-1.png" alt="UML Use Case diagram" width="400">
+  <img src="Estate-sequence-1.png" alt="UML Use Case diagram" width="600">
 </p>
 
 The figure below presents the UML Sequence diagram for invocation of the ``addSellHouseOffer()`` method. The method corresponds to the ``Add a house for sale`` use case.
 <p align="center">
-  <img src="Estate-sequence-2.png" alt="UML Use Case diagram" width="400">
+  <img src="Estate-sequence-2.png" alt="UML Use Case diagram" width="600">
 </p>
 
 
