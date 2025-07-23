@@ -41,7 +41,6 @@ The figure below presents the UML Sequence diagram for invocation of the ``addSe
   <img src="Estate-sequence-2.png" alt="UML Use Case diagram" width="600">
 </p>
 
+## Running the package
 
-## Running test suites
-
-The ``RunTestSuite`` class should be run to execute predefined test suites for two example smart contracts. 
+The ``Main`` class should be run to execute Estate application. 
